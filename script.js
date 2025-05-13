@@ -18,9 +18,8 @@ function formatFullName(firstName, lastName) {
 }
 
 // Example Usage:
-formatFullName("jermal", "wynder");
 
-console.log();
+formatFullName("jermal", "wynder");
 
 // Task 2: Mathematical Operations with Multiple Parameters
 
@@ -46,11 +45,7 @@ function calculateTotalCost(price, quantity, taxRate) {
 
 calculateTotalCost(10, 5, 0.07);
 
-console.log();
-
 calculateTotalCost("skittles", 3, 10);
-
-console.log();
 
 // Task 3: Functions with Conditional Logic
 
@@ -78,17 +73,12 @@ function checkEligibility(age, isEmployed) {
 }
 
 // Example Usage:
-checkEligibility(21, true);
 
-console.log();
+checkEligibility(21, true);
 
 checkEligibility(24, false);
 
-console.log();
-
 checkEligibility(12, true);
-
-console.log();
 
 // Task 4: Refactoring for Reusability
 
@@ -108,13 +98,13 @@ function modifiedCalculateTotalCost(price, quantity, taxRate, discount = 0) {
     // Calculates the total cost of the items before any discounts or taxes
     const subTotal = price * quantity;
 
-    // Calculates the discount amount based on discount value
+    // Calculates the discount amount by multiplying the sub total by the discount percentage (divided by 100 to convert it to a decimal)
     const discountAmount = subTotal * (discount / 100);
 
     // Calculates the discounted price by subtracting discounted price from sub total
     const discountedPrice = subTotal - discountAmount;
 
-    // Calculates the tax amount based on the discounted price
+    // Calculates the tax amount by multiplying the discounted price by the tax rate (divided by 100 to convert it to a decimal)
     const taxAmount = discountedPrice * (taxRate / 100);
 
     // Calculates the final total cost by adding the discounted price and the tax
@@ -130,7 +120,5 @@ function modifiedCalculateTotalCost(price, quantity, taxRate, discount = 0) {
 // Example Usage:
 
 modifiedCalculateTotalCost(10, 5, 0.07, 25);
-
-console.log();
 
 modifiedCalculateTotalCost("one", 2, 3);
